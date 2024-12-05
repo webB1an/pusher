@@ -23,7 +23,7 @@ console.log('===================================================================
 
 const app: Express = express()
 const server: Server = http.createServer(app)
-const port = 3000
+const port = 3982
 
 app.use(cors())
 app.use(express.json())
