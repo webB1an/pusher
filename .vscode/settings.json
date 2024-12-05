@@ -54,7 +54,7 @@
     "editor.codeLens": true,
     "editor.snippetSuggestions": "top",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "git.ignoreLimitWarning": true,
     //"react-native-storybooks.port": 6006
