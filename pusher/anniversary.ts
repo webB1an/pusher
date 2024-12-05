@@ -1,3 +1,4 @@
+// Bark 纪念日推送
 import { getCryptoParams, pushMsg } from '../utils/pusher'
 import { sleep } from '../utils'
 export async function anniversary() {

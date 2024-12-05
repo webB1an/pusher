@@ -1,3 +1,4 @@
+// 企业微信机器人推送
 import axios from 'axios'
 import { getAnniversary } from '../utils/pusher'
 import { getLocation, getNowWeather, getWeatherIndices } from '../utils/weather'
