@@ -29,6 +29,9 @@ importers:
       express:
         specifier: ^4.17.1
         version: 4.21.1
+      lunar-typescript:
+        specifier: ^1.7.6
+        version: 1.7.6
     devDependencies:
       '@types/cors':
         specifier: ^2.8.12
@@ -1012,6 +1015,9 @@ packages:
   longest@2.0.1:
     resolution: {integrity: sha512-Ajzxb8CM6WAnFjgiloPsI3bF+WCxcvhdIG3KNA2KN962+tdBsHcuQ4k4qX/EcS/2CRkcc0iAkR956Nib6aXU/Q==}
     engines: {node: '>=0.10.0'}
+
+  lunar-typescript@1.7.6:
+    resolution: {integrity: sha512-vrNRgzJ6UgK++P81jaOykV7YBCLemC8l/XDbsXE7MinojXolOKiIHm6sOZg5wdDMbJxCWP1ERAaqcBV9mhw2Bg==}
 
   luxon@3.5.0:
     resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
@@ -2613,6 +2619,8 @@ snapshots:
       is-unicode-supported: 0.1.0
 
   longest@2.0.1: {}
+
+  lunar-typescript@1.7.6: {}
 
   luxon@3.5.0: {}
 

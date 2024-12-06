@@ -1,5 +1,7 @@
 # Pusher
 
+项目默认位置`/var/www/pusher`
+
 1. 发到服务器上使用记得`.dev.env`和`.prod.env`设置环境变量
 
 ```bash

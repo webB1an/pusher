@@ -57,5 +57,8 @@
         "source.fixAll.eslint": "explicit"
     },
     "git.ignoreLimitWarning": true,
+    "cSpell.words": [
+        "penta"
+    ],
     //"react-native-storybooks.port": 6006
 }
