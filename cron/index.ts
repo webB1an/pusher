@@ -3,7 +3,7 @@ import { CronJob } from 'cron'
 import pusher from '../pusher'
 
 export const job = new CronJob(
-  '0 30 7 * * *', // cronTime
+  '0 0 9 * * *', // cronTime
   function() {
     console.log('执行了')
     console.log(process.env.APP_ID)

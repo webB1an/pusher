@@ -39,10 +39,15 @@ pm2 save
 
 # 停止所有应用
 停止当前运行的 pm2 实例： 首先，你可以选择停止所有通过 pm2 启动的应用：
+
 pm2 stop all
+
 删除 pm2 的启动配置： 使用以下命令来删除 pm2 的开机自启配置，这个命令会取消之前通过 pm2 startup 设置的自启
+
 pm2 unstartup
+
 验证设置： 你可以通过以下命令检查 pm2 的状态，确保没有设置开机自启
+
 pm2 status
 
 - [手动执行](http://localhost:3000/pusher/do)
@@ -53,3 +58,7 @@ pm2 status
 项目中集成了百度和和风天气的 API，需要申请对应的 key 才能使用。
 - [和风天气 API](https://dev.qweather.com/docs/api/weather/weather-daily-forecast/)
 - [高德地图控制台](https://console.amap.com/dev/key/app)
+
+
+-[dayjs](https://day.js.org/docs/zh-CN/display/difference)
+-[农历](https://6tail.cn/calendar/api.html#lunar.solar.html)
