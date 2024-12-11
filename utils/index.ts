@@ -1,6 +1,25 @@
 import dayjs from 'dayjs'
 import axios from 'axios'
 
+export function timeLog() {
+  return dayjs().format('YYYY-MM-DD HH:mm:ss')
+}
+
+export function getRandomElement(arr: string[]) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return ''
+  }
+  const randomIndex = Math.floor(Math.random() * arr.length)
+  return arr[randomIndex]
+}
+
+export function logWithTime(...args: string[]|number[]) {
+  console.log(`
+${timeLog()}
+${args.join(' ')}
+`)
+}
+
 export function calculateAge(birthDate: string | number | dayjs.Dayjs) {
   const now = dayjs()
   const birth = dayjs(birthDate)

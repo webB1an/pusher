@@ -7,6 +7,7 @@ import type { Server } from 'http'
 import router from './routes'
 
 import { job } from './cron'
+import { logWithTime } from './utils'
 
 // if (process.env.NODE_ENV === 'dev' || !process.env.NODE_ENV) {
 //   dotenv.config({ path: './dev.env' })
@@ -16,10 +17,10 @@ import { job } from './cron'
 
 dotenv.config({ path: './dev.env' })
 
-console.log('====================================================================')
-console.log('BARK_PUSH_KEY', process.env.BARK_PUSH_KEY)
-console.log('BARK_PUSH_IV', process.env.BARK_PUSH_IV)
-console.log('====================================================================')
+logWithTime('====================================================================')
+logWithTime('BARK_PUSH_KEY', process.env.BARK_PUSH_KEY as string)
+logWithTime('BARK_PUSH_IV', process.env.BARK_PUSH_IV as string)
+logWithTime('====================================================================')
 
 const app: Express = express()
 const server: Server = http.createServer(app)

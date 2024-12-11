@@ -58,7 +58,5 @@ pm2 status
 项目中集成了百度和和风天气的 API，需要申请对应的 key 才能使用。
 - [和风天气 API](https://dev.qweather.com/docs/api/weather/weather-daily-forecast/)
 - [高德地图控制台](https://console.amap.com/dev/key/app)
-
-
 -[dayjs](https://day.js.org/docs/zh-CN/display/difference)
 -[农历](https://6tail.cn/calendar/api.html#lunar.solar.html)
