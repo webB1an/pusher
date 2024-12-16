@@ -59,6 +59,6 @@ export async function getHitokoto() {
   }
 }
 
-export function sleep() {
-  return new Promise(resolve => setTimeout(resolve, 10000))
+export function sleep(time?: number) {
+  return new Promise(resolve => setTimeout(resolve, time || 1000))
 }

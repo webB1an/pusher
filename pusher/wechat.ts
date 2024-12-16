@@ -3,16 +3,21 @@ import axios from 'axios'
 import { getAnniversary } from '../utils/pusher'
 import { getLocation, getNowWeather, getWeatherIndices } from '../utils/weather'
 import { getLunarExpectInterval } from '../utils/lunar'
+import { sleep } from '../utils'
 export async function wechat() {
   const location = ['蚌埠', '杭州']
   const weatherTxt = []
   for (const city of location) {
+    sleep()
     const location = await getLocation(city)
+    sleep()
     const weather = await getNowWeather(location.id)
-
+    sleep()
     const indices = await getWeatherIndices(location.id)
 
-    weatherTxt.push(`${city}：${weather.text}，${weather.temp}度，体感温度：${weather.feelsLike}度，${weather.windDir}${weather.windScale}级\n${indices.category}，${indices.text}`)
+    if (weather.text) {
+      weatherTxt.push(`${city}：${weather.text}，${weather.temp}度，体感温度：${weather.feelsLike}度，${weather.windDir}${weather.windScale}级\n${indices.category}，${indices.text}`)
+    }
   }
 
   const {
