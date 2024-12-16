@@ -19,6 +19,24 @@ export function getNowWeather(location: string): Promise<NowWeatherData> {
     axios.get(`https://devapi.qweather.com/v7/weather/now?location=${location}&key=${key}`)
       .then((res) => {
         resolve(res.data.now as unknown as NowWeatherData)
+      }).catch(() => {
+        resolve({
+          obsTime: '',
+          temp: '',
+          feelsLike: '',
+          icon: '',
+          text: '',
+          wind360: '',
+          windDir: '',
+          windScale: '',
+          windSpeed: '',
+          humidity: '',
+          precip: '',
+          pressure: '',
+          vis: '',
+          cloud: '',
+          dew: ''
+        })
       })
   })
 }
