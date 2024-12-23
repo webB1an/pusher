@@ -16,7 +16,8 @@ export async function wechat() {
     const indices = await getWeatherIndices(location.id)
 
     if (weather.text) {
-      weatherTxt.push(`${city}：${weather.text}，${weather.temp}度，体感温度：${weather.feelsLike}度，${weather.windDir}${weather.windScale}级\n${indices.category}，${indices.text}`)
+      const txt = (indices.category && indices.category) ? `${city}：${weather.text}，${weather.temp}度，体感温度：${weather.feelsLike}度，${weather.windDir}${weather.windScale}级\n${indices.category}，${indices.text}` : `${city}：${weather.text}，${weather.temp}度，体感温度：${weather.feelsLike}度，${weather.windDir}${weather.windScale}级`
+      weatherTxt.push(txt)
     }
   }
 

@@ -49,5 +49,8 @@ export function getWeatherIndices(location: string): Promise<Indices> {
       .then((res) => {
         if (res.data.daily && res.data.daily.length > 0) { resolve(res.data.daily[0] as unknown as Indices) } else { resolve({ date: '', type: '', name: '', level: '', category: '', text: '' }) }
       })
+      .catch(() => {
+        resolve({ date: '', type: '', name: '', level: '', category: '', text: '' })
+      })
   })
 }
