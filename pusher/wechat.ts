@@ -10,6 +10,7 @@ export async function wechat() {
   for (const city of location) {
     sleep()
     const location = await getLocation(city)
+    if (!location.id) return
     sleep()
     const weather = await getNowWeather(location.id)
     sleep()

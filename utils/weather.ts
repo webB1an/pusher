@@ -9,6 +9,9 @@ export function getLocation(city: string): Promise<Location> {
       .then((res) => {
         if (res.data.location && res.data.location.length > 0) { resolve(res.data.location[0] as unknown as Location) } else { resolve({ id: '101210101', name: '杭州', lat: '30.24603', lon: '120.21079' }) }
       })
+      .catch(() => {
+        resolve({ id: '', name: '', lat: '', lon: '' })
+      })
   })
 }
 
